@@ -234,6 +234,7 @@ body {
 
     .conteudo__principal {
         padding: 5px 5px 5px 5px;
+        width: 100%;
         flex-direction: column;
     }
 
@@ -243,10 +244,12 @@ body {
 
     .divInput {
         padding-left: 0px;
+        width: 100%;
     }
 
     .id__pokemon {
         padding-left: 0px;
+        width: 100%;
     }
 
     .resultado__pokemon {
