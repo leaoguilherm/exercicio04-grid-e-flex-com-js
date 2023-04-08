@@ -1,0 +1,256 @@
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: #FCE6A8;
+    height: 100vh;
+    padding: 5px;
+
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+
+    grid-template-areas: 
+        "_menu _titulo"
+        "_principal _principal"
+        "_rodape _rodape"
+        ;
+}
+
+
+.conteiner__menu {
+    background-color: #D2E4E1;
+    grid-area: _menu;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.conteiner__menu > a {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 8px 15px 8px 15px;
+
+    background-color: #788896;
+    border-radius: 4px;
+
+}
+
+.conteiner__titulo {
+    background-color: #D2E4E1;
+    grid-area: _titulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteiner__titulo > h1 {
+    margin: 0px;
+}
+
+.conteiner__principal {
+    background-color: #D2E4E1;
+    grid-area: _principal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.conteiner__rodape {
+    background-color: #D2E4E1;
+    grid-area: _rodape;
+    padding-top: 3px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.conteiner__rodape > p {
+    margin: 0px
+    
+}
+
+
+
+.conteudo__principal {
+    padding: 10px 5px 10px 10px;
+    background-color: #E3E8ED;
+
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.divInput {
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.divInput > input {
+    padding: 8px;
+    border: solid #CED8E0;
+    border-radius: 3px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.divInput > button {
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 6px;
+    background-color: #788896;
+    font-weight: bold;
+    color: white;
+
+}
+
+.resultado__soma {
+    border: solid #788896;
+    width: 180px;
+    height: 180px;
+
+    background-color: #CED8E0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.resultado__soma p {
+    margin: 0px;
+    padding-left: 5px;
+    font-size: 25px;
+}
+
+.resultado__soma > #conteinerResultado {
+    font-size: 60px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* POKEMON */
+
+.id__pokemon {
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.id__pokemon > input {
+    padding: 8px;
+    border: solid #CED8E0;
+    border-radius: 3px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    opacity: 0.5;
+
+}
+
+.id__pokemon > button {
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 6px;
+    background-color: #788896;
+    font-weight: bold;
+    color: white;
+}
+
+.resultado__pokemon {
+    border: solid #788896;
+    width: 180px;
+    height: 180px;
+    padding-top: 5px;
+
+    background-color: #CED8E0;
+
+    display: flex;
+    flex-direction: column;
+
+
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr; */
+}
+
+#conteiner_name {
+    margin: 0px;
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+#conteinerImg {
+    align-self: center;
+    flex-grow: 1;
+}
+
+
+
+@media screen and (max-width:600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 1fr 1fr 0.1fr;
+    
+        grid-template-areas: 
+            "_titulo"
+            "_menu"
+            "_principal"
+            "_rodape"
+            ;
+    }
+
+    .conteiner__titulo > h1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .conteiner__principal {
+        padding: 10px;
+    }
+
+    .conteudo__principal {
+        padding: 5px 5px 5px 5px;
+        flex-direction: column;
+    }
+
+    .resultado__soma {
+        width: 100%;
+    }
+
+    .divInput {
+        padding-left: 0px;
+    }
+
+    .id__pokemon {
+        padding-left: 0px;
+    }
+
+    .resultado__pokemon {
+        width: 100%;
+    }
+}
+

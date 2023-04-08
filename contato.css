@@ -1,0 +1,286 @@
+
+
+body {
+    margin: 0px;
+    background-color: #FCE6A8;
+    height: 100vh;
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-areas:
+        "_menu _titulo"
+        "_aolado _contato"
+        "_vazio _rodape"
+    ;
+    gap: 5px;
+}
+
+.conteiner__menu {
+    background-color: #D2E4E1;
+    grid-area: _menu;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.conteiner__menu>a {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 8px 15px 8px 15px;
+
+    background-color: #788896;
+    border-radius: 4px;
+}
+
+.conteiner__titulo {
+    background-color: #D2E4E1;
+    grid-area: _titulo;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteiner__titulo > h1 {
+    margin: 0px;
+}
+
+.conteiner__aolado {
+    background-color: #D2E4E1;
+    grid-area: _aolado;
+    padding: 10px 10px 10px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.conteiner__contato {
+    background-color: #D2E4E1;
+    grid-area: _contato;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.conteiner__vazio {
+    background-color: #D2E4E1;
+    grid-area: _vazio;
+}
+
+.conteiner__rodape {
+    background-color: #D2E4E1;
+    grid-area: _rodape;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.conteiner__rodape>p {
+    margin: 0px;
+}
+
+
+
+.conteiner__aolado>a {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 8px 15px 8px 15px;
+    width: 200px;
+    text-align: center;
+    background-color: #788896;
+    border-radius: 4px;
+}
+
+.conteiner__aolado>img {
+    width: 200px;
+}
+
+.contato {
+    padding: 30px 40px 31px 40px;
+    height: 350px;
+    background-color: #E3E8ED;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr 0fr 1fr 0fr 0fr;
+    grid-template-areas:
+        "_nome _sobrenome"
+        "_email _email"
+        "_mensagem _mensagem"
+        "_botao _botao"
+        "_retornoEnvio _retornoEnvio"
+
+    ;
+    gap: 10px;
+
+}
+
+#inputName {
+    grid-area: _nome;
+    height: 30px;
+
+    padding: 5px;
+    border: solid #CED8E0;
+    border-radius: 3px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    opacity: 0.8;
+    flex-grow: 0;
+    
+}
+
+#inputSobrenome {
+    grid-area: _sobrenome;
+    height: 30px;
+
+    padding: 5px;
+    border: solid #CED8E0;
+    border-radius: 3px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    opacity: 0.8;
+    flex-grow: 0;
+}
+
+#inputEmail {
+    grid-area: _email;
+    height: 30px;
+
+    padding: 5px;
+    border: solid #CED8E0;
+    border-radius: 3px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    opacity: 0.8;
+    flex-grow: 0;
+}
+
+#inputMensagem {
+    grid-area: _mensagem;
+
+    padding: 8px;
+    border: solid #CED8E0;
+    border-radius: 3px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    opacity: 0.8;
+    flex-grow: 1;
+}
+
+#btnEnviar {
+    grid-area: _botao;
+    height: 45px;
+    align-self: center;
+    text-align: center;
+
+    border: solid #CED8E0;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #788896;
+    border-radius: 4px;
+    border: none;
+    color: white;
+}
+
+#mensagemSucesso {
+    grid-area: _retornoEnvio;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1px;
+    text-align: center;
+    background-color: #237223;
+    border-radius: 4px;
+    display: none;
+    
+
+}
+
+
+
+
+/* MIDIAQUERY */
+
+
+@media screen and (max-width:600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 1fr 1fr 0.1fr;
+        grid-template-areas:
+            "_titulo"
+            "_menu"
+            "_aolado"
+            "_contato"
+            "_rodape"
+        ;
+        gap: 5px;
+    }
+
+    .conteiner__titulo > h1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+
+
+
+    .conteiner__contato {
+        padding: 20px 10px 20px 10px;
+    }
+
+    .contato {
+        padding: 5px 5px 5px 5px;
+        height: 350px;
+        background-color: #E3E8ED;
+    
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 0fr 0fr 0fr 1fr 0fr 0fr;
+        grid-template-areas:
+            "_nome" 
+            "_sobrenome"
+            "_email"
+            "_mensagem"
+            "_botao"
+            "_retornoEnvio"
+    
+        ;
+        gap: 10px;
+    
+    }
+
+    .conteiner__vazio {
+        display: none;
+    }
+
+
+}
