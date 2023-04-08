@@ -121,7 +121,7 @@ body {
     opacity: 0.5;
 }
 
-.divInput > button {
+.divInput > #btn-somar {
     padding: 8px;
     font-size: 20px;
     border-radius: 6px;
@@ -130,7 +130,21 @@ body {
     color: white;
 }
 
-.divInput > button:hover {
+.divInput > #btn-somar:hover {
+    background-color: #8999a7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0.5, 0.5);;
+}
+
+.divInput > #btn-limpar {
+    padding: 2px;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: #788896;
+    font-weight: bold;
+    color: white;
+}
+
+.divInput > #btn-limpar:hover {
     background-color: #8999a7;
     box-shadow: 2px 2px 5px rgba(0, 0, 0.5, 0.5);;
 }
