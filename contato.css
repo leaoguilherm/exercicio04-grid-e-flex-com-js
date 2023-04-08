@@ -41,6 +41,11 @@ body {
     border-radius: 4px;
 }
 
+.conteiner__menu>a:hover {
+    background-color: #8999a7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .conteiner__titulo {
     background-color: #D2E4E1;
     grid-area: _titulo;
@@ -86,7 +91,7 @@ body {
 .conteiner__rodape {
     background-color: #D2E4E1;
     grid-area: _rodape;
-    padding: 5px;
+    padding: 10px;
 
     display: flex;
     flex-direction: column;
@@ -96,6 +101,7 @@ body {
 
 .conteiner__rodape>p {
     margin: 0px;
+    font-family: sans-serif;
 }
 
 
@@ -111,6 +117,11 @@ body {
     text-align: center;
     background-color: #788896;
     border-radius: 4px;
+}
+
+.conteiner__aolado>a:hover {
+    background-color: #8999a7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .conteiner__aolado>img {
@@ -134,6 +145,7 @@ body {
 
     ;
     gap: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -145,7 +157,7 @@ body {
     border: solid #CED8E0;
     border-radius: 3px;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     opacity: 0.8;
     flex-grow: 0;
@@ -160,7 +172,7 @@ body {
     border: solid #CED8E0;
     border-radius: 3px;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     opacity: 0.8;
     flex-grow: 0;
@@ -174,7 +186,7 @@ body {
     border: solid #CED8E0;
     border-radius: 3px;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     opacity: 0.8;
     flex-grow: 0;
@@ -187,7 +199,7 @@ body {
     border: solid #CED8E0;
     border-radius: 3px;
     font-size: 22px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     opacity: 0.8;
     flex-grow: 1;
@@ -208,7 +220,12 @@ body {
     color: white;
 }
 
-#mensagemSucesso {
+#btnEnviar:hover {
+    background-color: #8999a7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#mensagemRetorno {
     grid-area: _retornoEnvio;
     color: white;
     text-decoration: none;

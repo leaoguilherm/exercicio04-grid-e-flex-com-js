@@ -4,14 +4,37 @@ window.addEventListener("load", () => {
 })
 
 function enviar() {
-    const nome = buscarInputs("#inputName")
-    const sobrenome = buscarInputs("#inputSobrenome")
-    const email = buscarInputs("#inputEmail")
-    const mensagem = buscarInputs("#inputMensagem")
+    if (validacao()) {
+        const nome = buscarInputs("#inputName")
+        const sobrenome = buscarInputs("#inputSobrenome")
+        const email = buscarInputs("#inputEmail")
+        const mensagem = buscarInputs("#inputMensagem")
 
-    enviarDados(nome, sobrenome, email, mensagem)
+        enviarDados(nome, sobrenome, email, mensagem)
 
-    respostaEnvio()
+        respostaEnvio()
+
+        limparDados()
+    }
+}
+
+function validacao() {
+    const valorInputName = document.getElementById("inputName").value
+    const valorInputSobrenome = document.getElementById("inputSobrenome").value
+    const valorInputEmail = document.getElementById("inputEmail").value
+    const valorInputMensagem = document.getElementById("inputMensagem").value
+
+    const mensagemValidacao = document.getElementById("mensagemRetorno")
+
+    if (valorInputName == "" || valorInputSobrenome == "" || valorInputEmail == "" || valorInputMensagem == "") {
+        mensagemValidacao.innerHTML = "Digite todos os campos antes de enviar a mensagem."
+        mensagemValidacao.style.backgroundColor = "red"
+        mensagemValidacao.style.display = "block"
+
+        return false
+    }
+
+    return true
 }
 
 function buscarInputs(input) {
@@ -31,15 +54,28 @@ async function enviarDados(valorNome, valorSobrenome, ValorEmail, valorMensagem)
             sobrenome: valorSobrenome,
             email: ValorEmail,
             mensagem: valorMensagem
-        }) 
+        })
     }
     await fetch(url, options)
 }
 
 function respostaEnvio() {
-    const resposta = document.getElementById("mensagemSucesso")
+    const resposta = document.getElementById("mensagemRetorno")
+    resposta.innerHTML = "Mensagem enviada com sucesso!"
+    resposta.style.backgroundColor = "green"
     resposta.style.display = "block"
 
-    //const elementoContato = document.getElementById("idContato")
-    //elementoContato.style.paddingBottom = "0px"
+}
+
+function limparDados() {
+    const valorInputName = document.getElementById("inputName")
+    const valorInputSobrenome = document.getElementById("inputSobrenome")
+    const valorInputEmail = document.getElementById("inputEmail")
+    const valorInputMensagem = document.getElementById("inputMensagem")
+
+    valorInputName.value = ""
+    valorInputSobrenome.value = ""
+    valorInputEmail.value = ""
+    valorInputMensagem.value = ""
+
 }

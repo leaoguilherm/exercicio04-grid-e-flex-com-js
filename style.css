@@ -46,6 +46,11 @@ body {
 
 }
 
+.conteiner__menu>a:hover {
+    background-color: #8999a7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .conteiner__titulo {
     background-color: #D2E4E1;
     grid-area: _titulo;
@@ -56,6 +61,7 @@ body {
 
 .conteiner__titulo > h1 {
     margin: 0px;
+    font-family: sans-serif;
 }
 
 .conteiner__principal {
@@ -72,7 +78,7 @@ body {
 .conteiner__rodape {
     background-color: #D2E4E1;
     grid-area: _rodape;
-    padding-top: 3px;
+    padding: 10px;
 
     display: flex;
     flex-direction: column;
@@ -81,8 +87,8 @@ body {
 }
 
 .conteiner__rodape > p {
-    margin: 0px
-    
+    margin: 0px;
+    font-family: sans-serif;
 }
 
 
@@ -95,6 +101,7 @@ body {
     gap: 15px;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .divInput {
@@ -121,18 +128,24 @@ body {
     background-color: #788896;
     font-weight: bold;
     color: white;
+}
 
+.divInput > button:hover {
+    background-color: #8999a7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0.5, 0.5);;
 }
 
 .resultado__soma {
     border: solid #788896;
     width: 180px;
     height: 180px;
+    overflow: auto;
 
     background-color: #CED8E0;
 
     display: flex;
     flex-direction: column;
+    word-break: break-all;
 }
 
 .resultado__soma p {
@@ -147,6 +160,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    word-break: break-all;
 }
 
 
@@ -178,6 +192,11 @@ body {
     background-color: #788896;
     font-weight: bold;
     color: white;
+}
+
+.id__pokemon > button:hover {
+    background-color: #8999a7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0.5, 0.5);;
 }
 
 .resultado__pokemon {
